@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张稳定 - AI工程师</title>
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            z-index: 1000;
+            padding: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: #222;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #ff6b6b;
+        }
+
+        /* 首屏展示样式 */
+        .hero {
+            background-color: #333;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            background-image: url('background.jpg'); /* 替换为你的背景图 */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ddd;
+        }
+
+        /* 关于我样式 */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 专业经历样式 */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item .position {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-item ul li {
+            margin-bottom: 10px;
+        }
+
+        /* 技能样式 */
+        .skill-category {
+            margin-bottom: 30px;
+        }
+
+        .skill-category h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-category ul li {
+            margin-bottom: 10px;
+        }
+
+        /* 项目展示样式 */
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* 教育背景样式 */
+        .education-item {
+            margin-bottom: 30px;
+        }
+
+        .education-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .education-item .degree {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .education-item .date {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* 联系方式样式 */
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item p {
+            font-size: 18px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 16px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar .nav-links li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .experience-item h3, .skill-category h3, .project-item h3, .education-item h3 {
+                font-size: 20px;
+            }
+
+            .experience-item .position, .experience-item .date, .skill-category ul li, .project-item p, .education-item .degree, .education-item .date {
+                font-size: 16px;
+            }
+
+            .contact-item p {
+                font-size: 16px;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">张稳定</div>
+            <ul class="nav-links">
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#experience">专业经历</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">项目展示</a></li>
+                <li><a href="#education">教育背景</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首屏展示 -->
+    <header class="hero">
+        <div class="container">
+            <h1>张稳定</h1>
+            <p>AI工程师</p>
+            <p>专注于机器学习与深度学习，致力于解决实际问题</p>
+        </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>关于我</h2>
+            <p>我是一名AI工程师，毕业于XX大学计算机科学与技术专业。我对机器学习和深度学习有深厚的兴趣，并在自然语言处理和计算机视觉领域积累了丰富的经验。</p>
+            <p>在XX科技有限公司担任AI工程师期间，我参与了多个项目，包括智能客服问答系统和工业缺陷检测项目，取得了显著的成果。</p>
+        </div>
+    </section>
+
+    <!-- 专业经历 -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>专业经历</h2>
+            <div class="experience-item">
+                <h3>XX科技有限公司</h3>
+                <p class="position">AI工程师</p>
+                <p class="date">2021.07 – 至今</p>
+                <ul>
+                    <li>智能客服问答系统：基于BERT优化意图识别模型，准确率提升12%，响应时间缩短30%；设计数据增强方案，解决小样本场景下的泛化问题。</li>
+                    <li>工业缺陷检测项目：改进YOLOv5模型，在产线数据上实现99.2%的检测准确率；部署模型至边缘设备（Jetson TX2），推理速度达50 FPS。</li>
+                </ul>
+            </div
